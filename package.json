@@ -1,6 +1,6 @@
 {
     "name": "@ionaru/random-string",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Generates a random string with a given length",
     "bin": "dist/cli.js",
     "main": "dist/index.js",
