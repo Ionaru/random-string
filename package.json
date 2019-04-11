@@ -13,16 +13,32 @@
         "lint:src": "tslint --project tsconfig.json -c tslint.json --format stylish",
         "lint:test": "tslint -c tslint.json src/**/*.spec.ts --format stylish",
         "pretest": "npm run lint",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest src",
+        "posttest": "codecov -f coverage/*.json",
         "prepare": "npm run build",
         "preversion": "npm run test"
+    },
+    "jest": {
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "src/**/*.ts",
+            "!src/**/*.d.ts",
+            "!src/**/*.spec.ts",
+            "!src/__mocks__/*.ts"
+        ],
+        "preset": "ts-jest",
+        "testEnvironment": "node"
     },
     "keywords": [],
     "author": "Jeroen Akkerman",
     "repository": "github:Ionaru/random-string",
     "license": "MIT",
     "devDependencies": {
+        "@types/jest": "^24.0.11",
         "@types/node": "11.13.4",
+        "codecov": "^3.3.0",
+        "jest": "^24.7.1",
+        "ts-jest": "^24.0.2",
         "tslint": "5.15.0",
         "tslint-sonarts": "1.9.0",
         "typescript": "3.4.3"
