@@ -2,7 +2,6 @@
     "name": "@ionaru/random-string",
     "version": "0.0.0",
     "description": "My package random-string",
-    "bin": "dist/index.js",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
