@@ -1,7 +1,7 @@
 {
     "name": "@ionaru/random-string",
     "version": "0.0.0",
-    "description": "My package random-string",
+    "description": "Generates a random string with a given length",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
