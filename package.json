@@ -1,0 +1,32 @@
+{
+    "name": "@ionaru/random-string",
+    "version": "0.0.0",
+    "description": "My package random-string",
+    "bin": "dist/index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "build": "tsc --project tsconfig.json",
+        "lint": "npm run lint:src && npm run lint:test",
+        "lint:src": "tslint --project tsconfig.json -c tslint.json --format stylish",
+        "lint:test": "tslint -c tslint.json src/**/*.spec.ts --format stylish",
+        "pretest": "npm run lint",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "npm run build",
+        "preversion": "npm run test"
+    },
+    "keywords": [],
+    "author": "Jeroen Akkerman",
+    "repository": "github:Ionaru/random-string",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "11.13.4",
+        "tslint": "5.15.0",
+        "tslint-sonarts": "1.9.0",
+        "typescript": "3.4.3"
+    },
+    "dependencies": {}
+}
