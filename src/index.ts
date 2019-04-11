@@ -13,8 +13,9 @@ export function generateRandomString(length: number): string {
         throw new Error(`Length must be an integer.`);
     }
 
-    let output = '';
     const possibleCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    let output = '';
     for (let i = 0; i < length; i++) {
         output += possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
     }
