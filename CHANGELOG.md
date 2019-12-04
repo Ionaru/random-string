@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Node.js 13 support.
+- Second command argument to control the character set.
 
 ## [1.1.1] - 2019-11-06
 ### Fixed

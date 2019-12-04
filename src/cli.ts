@@ -2,19 +2,21 @@
 
 import { generateRandomString } from './index';
 
-const commandArg = process.argv[2] as unknown;
+const lengthArg = process.argv[2] as string | undefined;
 
-if (!commandArg) {
-    throw new Error('A number must be given as command parameter.');
+if (!lengthArg) {
+    throw new Error('A number must be given as the first command parameter.');
 }
 
-const input = Number(commandArg);
+const length = Number(lengthArg);
 
-if (Number.isNaN(input)) {
-    throw new Error('The given command parameter is not a number.');
+if (Number.isNaN(length)) {
+    throw new Error('The first command parameter is not a number.');
 }
 
-const result = generateRandomString(input);
+const characterArg = process.argv[3] as string | undefined;
+
+const result = generateRandomString(length, characterArg);
 
 // tslint:disable-next-line:no-console
 console.log(result);

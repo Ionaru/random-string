@@ -1,9 +1,10 @@
 /**
  * Generate a random string from a range of 62 characters.
  * @param {number} length - The length of the desired string.
+ * @param {string} characters - The characters to select from.
  * @return {string} - The randomly generated string.
  */
-export function generateRandomString(length: number): string {
+export function generateRandomString(length: number, characters?: string): string {
 
     if (length < 0) {
         throw new Error('Length must be a positive number.');
@@ -13,7 +14,7 @@ export function generateRandomString(length: number): string {
         throw new Error(`Length must be an integer.`);
     }
 
-    const possibleCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const possibleCharacters = characters || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
     let output = '';
     for (let i = 0; i < length; i++) {

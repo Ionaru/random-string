@@ -15,4 +15,19 @@ describe('generateRandomString', () => {
 
         expect(() => generateRandomString(length as number)).toThrow(error as string);
     });
+
+    test('Generate only A', () => {
+        const result = generateRandomString(10, 'A');
+        expect(result).toEqual('AAAAAAAAAA');
+    });
+
+    test('Generate only AA', () => {
+        const result = generateRandomString(10, 'AA');
+        expect(result).toEqual('AAAAAAAAAA');
+    });
+
+    test('Generate only 8', () => {
+        const result = generateRandomString(10, '8');
+        expect(result).toEqual('8888888888');
+    });
 });
