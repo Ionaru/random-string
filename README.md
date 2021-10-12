@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@ionaru/random-string.svg?style=for-the-badge)](https://www.npmjs.com/package/@ionaru/random-string)
 [![npm version](https://img.shields.io/npm/v/@ionaru/random-string/next.svg?style=for-the-badge)](https://www.npmjs.com/package/@ionaru/random-string/v/next)
-[![Build Status](https://img.shields.io/travis/Ionaru/random-string/master.svg?style=for-the-badge)](https://travis-ci.org/Ionaru/random-string)
+[![Build Status](https://img.shields.io/github/workflow/status/ionaru/random-string/Test%20&%20Deploy/master?style=for-the-badge)](https://github.com/Ionaru/random-string/actions)
 [![codecov](https://img.shields.io/codecov/c/github/Ionaru/random-string/master.svg?style=for-the-badge)](https://codecov.io/gh/Ionaru/random-string)
 
 ## Description
