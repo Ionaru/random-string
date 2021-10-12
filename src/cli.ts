@@ -18,5 +18,5 @@ const characterArg = process.argv[3] as string | undefined;
 
 const result = generateRandomString(length, characterArg);
 
-// tslint:disable-next-line:no-console
+// eslint-disable-next-line no-console
 console.log(result);

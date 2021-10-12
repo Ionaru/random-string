@@ -4,7 +4,14 @@ All notable changes to the random-string project will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-<!--## [Unreleased]-->
+## [Unreleased]
+### BREAKING CHANGED
+- Removed Node.js 10 support.
+
+### Added
+- Node.js 16 support
+
+
 ## [3.0.0] - 2020-06-22
 ### BREAKING CHANGES
 - Removed Node.js 13 support.

@@ -4,7 +4,7 @@
  * @param {string} characters - The characters to select from.
  * @return {string} - The randomly generated string.
  */
-export function generateRandomString(length: number, characters?: string): string {
+export const generateRandomString = (length: number, characters?: string): string => {
 
     if (length < 0) {
         throw new Error('Length must be a positive number.');
@@ -21,4 +21,4 @@ export function generateRandomString(length: number, characters?: string): strin
         output += possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
     }
     return output;
-}
+};
