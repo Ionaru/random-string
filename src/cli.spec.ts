@@ -1,13 +1,14 @@
-describe('Test generateRandomString CLI', () => {
+describe('generateRandomString CLI', () => {
 
-    jest.spyOn(console, 'log');
+    // eslint:disable-next-line no-console
+    jest.spyOn(console, 'log').mockImplementation();
 
     afterEach(() => {
         jest.clearAllMocks();
         jest.resetModules();
     });
 
-    it('Forgetting the command argument', () => {
+    it('forgetting the command argument', () => {
 
         expect.assertions(1);
 
@@ -23,7 +24,7 @@ describe('Test generateRandomString CLI', () => {
         ['-5', 'Length must be a positive number.'],
         ['Not a Number', 'The first command parameter is not a number.'],
 
-    ])('Invalid command parameters', (input, error) => {
+    ])('invalid command parameters', (input, error) => {
 
         expect.assertions(1);
 
@@ -40,7 +41,7 @@ describe('Test generateRandomString CLI', () => {
         [['', '', '5', '']],
         [['', '', '5', 'Something else']],
         [['', '', '5', '123']],
-    ])('Correct calls', (input) => {
+    ])('correct calls', (input) => {
 
         expect.assertions(1);
 
